@@ -1,0 +1,144 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.logo-enter {
+    transform: translateY(-300%)
+}
+
+.logo-enter-active {
+    transform: translateY(0);
+    transition: all 500ms linear;
+}
+
+.alert-enter {
+    opacity: 0;
+    transform: scale(0.1);
+}
+.alert-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 250ms linear;
+}
+
+.alert-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+.alert-exit-active {
+    opacity: 0;
+    transform: scale(0.1);
+    transition: all 250ms linear;
+}
+
+header {
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 0 0 5px 5px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+nav {
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    transition: all 250ms linear;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: white;
+    background-color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    transition: all 250ms linear;
+    outline: none;
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+input {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    transition: all 250ms linear;
+    border: solid 2px white;
+}
+
+input:hover,
+input:focus {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.exit-button {
+    width: 150px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    background-color: tomato;
+    color: white;
+    transition: all 250ms linear;
+    outline: none;
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exit-button:hover {
+    color: black;
+    background-color: red;
+    border-color: black;
+}
+
+#root {
+    width: 350px;
+    background-color: grey;
+}
