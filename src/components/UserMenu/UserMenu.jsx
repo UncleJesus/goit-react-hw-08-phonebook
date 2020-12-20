@@ -1,32 +1,36 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {logout} from '../../redux/operations/authOperations';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { logout } from "../../redux/operations/authOperations";
 
 class UserMenu extends Component {
+  handleClick = () => {
+    this.props.logout();
+  };
 
-    handleClick = () => {
-        this.props.logout();
-    };
+  render() {
+    const { user } = this.props;
 
-    render () {
-        const {user} = this.props;
-
-        return (
-            <div className="wrapper">
-            <h2>Welcome, {user.name}</h2>
-            <button className="exit-button" onClick={this.handleClick} type="button">Exit</button>
-            </div>
-        )
-    };
-    
-};
+    return (
+      <div className="wrapper">
+        <h2>Welcome, {user.name}</h2>
+        <button
+          className="exit-button"
+          onClick={this.handleClick}
+          type="button"
+        >
+          Log Out
+        </button>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = (state) => ({
-    user: state.auth.user
+  user: state.auth.user,
 });
 
 const mapDispatchToProps = {
-    logout
+  logout,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserMenu);
